@@ -9,7 +9,7 @@ def linear():
         a = float(input("a = "))
         b = float(input("b = "))
     except ValueError:
-        print("Неверно ввведено число.")
+        print("Неверно введено число.")
         return
     
     if a == 0:
