@@ -2,9 +2,9 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 def func(x):
-    return x**2 - 4*np.sin(x) - 1
+    return x**3 - 2*(x**2) - np.sin(x) + 1
 
-X = np.arange(-10,10,0.1)
+X = np.arange(-1.5,2.5,0.1)
 plt.plot(X, func(X))
 plt.xlabel("x")
 plt.ylabel("y")
@@ -13,7 +13,6 @@ plt.show()
 
 
 epsilon = 0.0001
-#тут вводим на глазок
 left = float(input("Левая граница a: "))
 right = float(input("Правая граница b: "))
 
@@ -22,11 +21,11 @@ if(not (func(left)*func(right) < 0)):
     exit()
 
 while(right-left > epsilon):
-    x1 = (left + right)/2
-    if(func(left)*func(x1) < 0):
-        right = x1
+    x0 = (left + right)/2
+    if(func(left)*func(x0) < 0):
+        right = x0
     else:
-        left = x1
+        left = x0
     if(right-left < epsilon):
-        print("x1 =", x1)
-        print("f(x1) =",func(x1))
+        print("x0 =", x0)
+        print("f(x0) =",func(x0))
