@@ -15,7 +15,6 @@ menu.add("Квадратное уравнение", solve.square)
 menu.add("Линейная система", solve.linear_system)
 menu.add("Возведение матрицы в степень", solve.matrix_raising)
 
-
 def main():
     try:
         variant = int(input(f"Введите, что вы хотите решить:\n{menu.get_readable_menu()} >>> "))
